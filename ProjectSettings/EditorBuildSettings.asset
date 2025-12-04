@@ -15,8 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Settings.unity
     guid: 3d2d24434a9e54badabc26c426baf5ba
   - enabled: 1
+    path: Assets/Scenes/Training Room.unity
+    guid: d279ef3614fa8be47b773370c34d75c3
+  - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 5d5d751da09d5ac4781f0698ec09a69b
+  - enabled: 1
+    path: Assets/Scenes/InBetweenScene.unity
+    guid: b1ed4f66805e26c419929bac27019472
+  - enabled: 1
+    path: Assets/Scenes/FailState.unity
+    guid: b15c4092884b54882a3de2bc9964083a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

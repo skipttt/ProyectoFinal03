@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [Header("Scenes")]
-    public string gameSceneName = "Game";      // nombre de la escena del juego
+    public string gameSceneName = "Training Room";      // nombre de la escena del juego
     public string settingsSceneName = "Settings"; // nombre de la escena de settings
 
     // START GAME

@@ -4,6 +4,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainPlayer : MonoBehaviour
 {
@@ -48,17 +49,17 @@ public class MainPlayer : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 movement = transform.right * x + transform.forward * z;
-         
+
         controller.Move(movement * speed * Time.deltaTime);
 
-        if(Input.GetButtonDown("Jump") && OnGround)
+        if (Input.GetButtonDown("Jump") && OnGround)
         {
             speedDown.y = Mathf.Sqrt(salto * -2f * gravity);
         }
 
         speedDown.y += gravity * Time.deltaTime;
 
-        
+
         controller.Move(speedDown * Time.deltaTime);
 
     }
@@ -87,17 +88,17 @@ public class MainPlayer : MonoBehaviour
 
         if (hit.gameObject.GetComponent<Briars>() != null)
         {
-            
+
             //Debug.Log("colisión con zarza");
             hit.gameObject.SetActive(false);
             Health = Health - 10;
-            
+
         }
 
         if (Health <= 0)
         {
             Debug.Log("YOU'RE DEAD!");
-            gameObject.SetActive(false);
+            SceneManager.LoadScene("FailState");
         }
     }
 
